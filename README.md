@@ -40,8 +40,4 @@ API `/api/v1/user`, `/api/v1/categories`, `/api/v1/products`: thiếu token → 
 npm run build
 ```
 
-PHPUnit ép SQLite `:memory:` và mail fake/array, không tác động database thật. Kết quả thực tế trong `docs/SECTION6_VERIFICATION.md`.
 
-## Nguồn
-
-Tài liệu Section6 do người dùng gửi; đối chiếu Laravel 12 [Fortify](https://laravel.com/docs/12.x/fortify) và [Sanctum](https://laravel.com/docs/12.x/sanctum). Giữ nền CoffeeShop, UI/checkout Section4 và bộ test Section5; khác mã mẫu ở kiểm tra ownership, thu hồi token, bảo vệ secret 2FA/Telescope và thực thi API abilities.
