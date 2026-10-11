@@ -1,0 +1,194 @@
+{
+  "info": {
+    "name": "Section6 Secure API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{apiToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8006"
+    },
+    {
+      "key": "apiToken",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "List categories",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/categories"
+      }
+    },
+    {
+      "name": "Create categories",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/categories",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Postman sample\", \"description\": \"Section6 test\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Show categories",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/categories/1"
+      }
+    },
+    {
+      "name": "Update categories",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/categories/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Postman sample\", \"description\": \"Section6 test\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete categories",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/categories/1"
+      }
+    },
+    {
+      "name": "List products",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/products"
+      }
+    },
+    {
+      "name": "Create products",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/products",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Postman sample\", \"description\": \"Section6 test\", \"category_id\": 1, \"price\": 45000, \"currency\": \"VND\", \"display_image_url\": \"https://example.com/coffee.png\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Show products",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/products/1"
+      }
+    },
+    {
+      "name": "Update products",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/products/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"Postman sample\", \"description\": \"Section6 test\", \"category_id\": 1, \"price\": 45000, \"currency\": \"VND\", \"display_image_url\": \"https://example.com/coffee.png\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete products",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/v1/products/1"
+      }
+    }
+  ]
+}
